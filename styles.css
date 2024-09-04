@@ -1,0 +1,242 @@
+:root {
+    --bg-color: #00090e;
+    --text-color: #e1e1e1;
+    --primary-color: #81fe88;
+    --secondary-color: #888888;
+    --tag-color: #171d1f;
+    --font-family: "Prompt", sans-serif;
+    --itens-bg: #171d1f;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-family);
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    height: 100vh;
+    gap: 1.68em;
+    padding: 3.5em 0;
+}
+
+aside {
+    background-color: var(--itens-bg);
+    border-radius: 0.62em;
+    height: 100%;
+    padding: 2.5em 1em;
+    text-align: center;
+}
+
+.lista-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5em;
+    margin-top: 5em;
+    align-items: center;
+    list-style-type: none;
+}
+
+.lista-links li a {
+    display: flex;
+    flex-direction: column;
+    gap: 0.62em;
+    align-items: center;
+    text-decoration: none;
+    color: var(--secondary-color);
+    font-size: 1.37rem;
+}
+
+.lista-links li:first-of-type a {
+    color: var(--primary-color);
+}
+
+.link-destaque {
+    border: 1px solid var(--primary-color);
+    padding: 0.75em 1.87em;
+    border-radius: 0.5em;
+}
+
+main {
+    background-color: var(--itens-bg);
+    border-radius: 0.62em;
+    padding: 2em;
+    display: flex;
+    gap: 1.5em;
+}
+
+h2 {
+    font-size: 1.62rem;
+    margin-bottom: 2.5em;
+    font-weight: 600;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+form div {
+    display: flex;
+    flex-direction: column;
+}
+
+form div label {
+    font-size: 1.12rem;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+form div input,
+textarea {
+    width: 100%;
+    padding: 0.5em 1em;
+    background-color: var(--secondary-color);
+    border: none;
+    border-radius: 0.25em;
+    font-family: var(--font-family);
+    line-height: 1.4em;
+}
+
+form div input {
+    height: 2.43em;
+}
+
+textarea {
+    height: 10.06em;
+}
+
+.lista-tags li {
+    display: flex;
+    background-color: var(--secondary-color);
+    color: var(--bg-color);
+    gap: 0.62em;
+    padding: 0.25em 0.5em;
+    border-radius: 0.25em;
+}
+
+.lista-tags {
+    display: flex;
+}
+
+.container-botoes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container-botoes button {
+    width: 45%;
+    padding: 0.75em 2em 0.75em 0.75em;
+    text-align: center;
+    border-radius: 0.5em;
+    font-family: var(--font-family);
+    font-size: 1.12rem;
+    font-weight: 500;
+}
+
+.botao-descartar {
+    background-color: var(--itens-bg);
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    position: relative;
+}
+
+.botao-descartar::after {
+    content: "";
+    background-image: url("./img/trash.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 0.93em;
+    height: 0.93em;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translateY(-50%);
+    margin-left: 0.5em;
+}
+
+.botao-publicar {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    position: relative;
+}
+
+.botao-publicar::after {
+    content: "";
+    background-image: url("./img/upload.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 0.93em;
+    height: 0.93em;
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translateY(-50%);
+    margin-left: 0.5em;
+}
+
+.container-descricao {
+    width: 26.37em;
+}
+
+.main-img {
+    border-radius: 0.5em;
+    height: 100%;
+    object-fit: cover;
+}
+
+.container-imagem {
+    height: 23em;
+    padding: 1.5em 1em;
+    background-color: var(--secondary-color);
+    border-radius: 0.5em;
+}
+
+.container-upload-imagem button {
+    margin: 1em 0 0.5em 0;
+    background-color: var(--itens-bg);
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.5em;
+    color: var(--secondary-color);
+    width: 100%;
+    text-align: center;
+    padding: 0.75em;
+    font-family: var(--font-family);
+    font-weight: 600;
+    font-size: 1.12rem;
+    position: relative;
+    cursor: pointer;
+}
+
+.container-upload-imagem button::after {
+    content: "";
+    background-image: url("./img/upload.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 0.93em;
+    height: 0.93em;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0.5em;
+}
+
+.container-imagem-nome {
+    display: flex;
+    gap: 0.5em;
+    color: var(--secondary-color);
+    font-size: 0.93rem;
+}
